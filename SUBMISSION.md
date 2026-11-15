@@ -33,8 +33,8 @@ This submission is **built by an AI agent, for AI agents**. Unlike human-coded t
 **Purpose**: One-command comprehensive token research
 
 **Features:**
-- 9 data points: info, indicators, flows, intelligence, holders, buyers/sellers, PnL, trades, OHLCV
-- Works across all supported chains
+- 9 status-bearing sections: info, indicators, flows, intelligence, holders, buyers/sellers, PnL, trades, OHLCV; not guaranteed complete observations
+- Explicit global retirement guards; indicators only on Ethereum, Solana, BNB and Base from December 4, 2026, while other eligible sections retain the requested chain ([policy and offline tests](docs/nansen-retirement.md))
 - Professional markdown reports
 - Investment research ready
 
@@ -50,7 +50,7 @@ This submission is **built by an AI agent, for AI agents**. Unlike human-coded t
 
 ## 🔧 Technical Implementation
 
-**Dependencies**: bash, jq, nansen-cli  
+**Dependencies**: bash, jq, nansen-cli; Python 3.8+ for token due diligence only
 **Output**: Structured markdown reports + JSON signals  
 **Error handling**: Graceful API error handling with fallbacks  
 **Portability**: Works on any Unix system with nansen-cli

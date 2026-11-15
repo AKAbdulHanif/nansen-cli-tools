@@ -24,7 +24,7 @@ Cross-chain Smart Money flow analysis with rotation detection.
 **API calls:** ~12 per run
 
 ### 📋 Token Due Diligence
-One-command comprehensive token research — 9 data points in a single report.
+One-command token research — 9 status-bearing sections, not 9 guaranteed observations.
 
 ```bash
 ./token-due-diligence.sh So11111111111111111111111111111111111111112 --chain solana
@@ -32,7 +32,9 @@ One-command comprehensive token research — 9 data points in a single report.
 ```
 
 **What it produces:** Token info, Nansen indicators, flow intelligence, holder analysis, buyer/seller breakdown, PnL data, DEX trades, OHLCV — all in clean markdown.  
-**API calls:** 9 per run
+**Research requests:** Up to 9 per run; globally retired chains fail before any calls, and unsupported indicators alone are skipped while other eligible sections continue on the requested chain. Due diligence also requires Python 3.8+.
+
+See [retirement policy, UTC simulation override, status meanings and offline tests](docs/nansen-retirement.md). Indicators are restricted to Ethereum, Solana, BNB and Base from December 4, 2026; this is not a restriction on every other endpoint. Missing/failed results remain distinct from empty payloads and real zero. This scoped change does not guard the other tools below.
 
 ### 🐋 Whale Mirror
 SM trade consensus detector — alerts when multiple whales converge on the same token.
